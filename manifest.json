@@ -1,0 +1,45 @@
+{
+    "manifest_version": 3,
+    "name": "Open in VSCode",
+    "version": "0.1.0",
+    "description": "Adds an 'Open in VSCode' button to GitHub repositories, allowing users to quickly open the repository in Visual Studio Code.",
+    "permissions": [
+        "activeTab",
+        "storage"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "https://github.com/*"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "css": [
+                "./assets/styles.css"
+            ]
+        }
+    ],
+    "icons": {
+        "16": "./assets/VSCode-icon.jpg",
+        "48": "./assets/VSCode-icon.jpg",
+        "128": "./assets/VSCode-icon.jpg"
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_popup": "popup.html",
+        "icons": [
+            {
+                "16": "./assets/VSCode-icon.jpg",
+                "48": "./assets/VSCode-icon.jpg",
+                "128": "./assets/VSCode-icon.jpg"
+            }
+        ]
+    },
+    "host_permissions": [
+        "http://*/*",
+        "https://*/*"
+    ]
+}
