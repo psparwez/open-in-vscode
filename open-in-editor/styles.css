@@ -1,0 +1,54 @@
+.editor-iframe {
+  width: 90%;
+  height: 95vh;
+  position: fixed;
+  top: 20px;
+  inset: 0;
+  z-index: 9999;
+  border: 1px solid rgb(61, 68, 77);
+  border-radius: 5px;
+  margin: 0 auto;
+}
+
+.close-editor-btn {
+  height: 40px;
+  width: 40px;
+  background-color: #212730;
+  border: 1px solid rgb(61, 68, 77);
+  color: white;
+
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 16px;
+  position: absolute;
+  top: 1.5rem;
+  right: 1rem;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.expand-btn {
+  padding: 6px 10px;
+  background-color: #212730;
+  border: 1px solid rgb(61, 68, 77);
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: background-color 0.2s ease-in-out;
+
+  &:hover {
+    background-color: rgb(37, 45, 55);
+  }
+  &:hover > svg {
+    transform: scale(1.1) rotate(180deg);
+    transition: transform 0.2s ease-in-out;
+  }
+}

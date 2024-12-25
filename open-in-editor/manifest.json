@@ -1,0 +1,31 @@
+{
+    "manifest_version": 3,
+    "name": "GitHub Code Editor Button",
+    "description": "Adds a button on GitHub repo pages to open in a code editor view.",
+    "version": "1.0",
+    "permissions": [
+        "activeTab"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://github.com/*"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "css": [
+                "styles.css"
+            ]
+        }
+    ],
+    "host_permissions": [
+        "https://github1s.com/*"
+    ]
+}
